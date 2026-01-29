@@ -1,0 +1,20 @@
+> chmod 777 <dirpath/dirname>
+        > chmod 777 solana_jupiter_price_monitor
+
+> chown -R <username> <dirpath/dirname>
+        > chown -R user1 solana_jupiter_price_monitor
+
+> find <dirpath/dirname> -type d -exec chmod 777 {} \;
+        > find solana_jupiter_price_monitor -type d -exec chmod 777 {} \;
+
+> whereis <program-name>
+        > whereis google-chrome
+
+> cargo clean # clean project removing "target" dir (use it before backup)
+
+> ffmpeg -i <sourcename> <destinationname> # convert mp3 --> wav
+        > ffmpeg -i audio_1.mp3 audio_1.wav
+
+> cargo build --release --target x86_64-pc-windows-msvc # release MSVC per Windows
+
+> cargo build --release --target x86_64-pc-windows-gnu  # release GNU per Windows

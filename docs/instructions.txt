@@ -1,0 +1,39 @@
+ISTRUZIONI
+
+CREAZIONE ESEGUIBILE WINDOWS
+
+- eliminare la cartella "/logs"
+
+1 - creare la release con uno dei seguenti comandi:
+    > cargo build --release --target x86_64-pc-windows-msvc # release MSVC per Windows
+    > cargo build --release --target x86_64-pc-windows-gnu  # release GNU per Windows
+
+2 - creare una cartella root in Windows per la release appena creata
+
+3 - copiare l'eseguibile all'interno della cartella root
+
+4 - copiare la cartella 'config' all'interno della root.
+    NOTA: Non è necessario copiarla perché la crea in automatico, se non esiste, con i parametri di default. Però non crea config-2.json.
+
+5 - copiare la cartella 'audio' all'interno della root
+
+6 - copiare la cartella 'tokens' all'interno della root
+
+---------------
+
+FILE CONFIGURAZIONE
+
+- ./src/config.rs
+
+
+---------------
+
+AGGIUNTA TOKEN NEL CODICE (OBSOLETO: ORA ESISTE IL FILE tokens.json)
+
+- ./src/tokens.rs
+    - pub enum Token
+    - impl Token
+    - pub fn as_str(&self) -> &'static str
+    - pub fn id(&self) -> u32
+    - pub fn variants() -> &'static [Token]
+    - pub fn from_id(id: u32) -> Option<Token>
