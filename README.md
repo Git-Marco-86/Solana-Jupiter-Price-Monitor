@@ -1,6 +1,6 @@
 # Solana Jupiter Price Monitor
 
-A command-line tool written in Rust to monitor token prices and setting alerts on the Jupiter (Solana) platform.
+A TUI (Text-based User Interface) written in Rust to monitor token prices and setting alerts on the Jupiter (Solana) platform.
 
 ---
 
